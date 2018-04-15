@@ -9,6 +9,7 @@ public class Main {
         LList n2 = new LList(10, n1.next);
         LList n3 = new LList(20);
         System.out.println(n1);
+        n1.count(n1.next);
 
     }
 }

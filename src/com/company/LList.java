@@ -37,6 +37,12 @@ public class LList {
     public void setValue(int value) {
         this.value = value;
     }
+    public int count(LList head) {
+        if (next == null) {
+            return 0;
+        }
+        return 1 + count(head.next);
+    }
 
     @Override
     public String toString() {
