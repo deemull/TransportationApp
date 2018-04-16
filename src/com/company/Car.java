@@ -1,9 +1,9 @@
 package com.company;
 
 public class Car {
-    int numOfOccupants;
-    int id;
-    String color;
+    private int numOfOccupants;
+    private int id;
+    private String color;
 
     public Car() {
         numOfOccupants = 0;
@@ -37,9 +37,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", color='" + color + '\'' +
+        return "Car{" + id + "" + color + "" + numOfOccupants + '\'' +
                 '}';
     }
 }

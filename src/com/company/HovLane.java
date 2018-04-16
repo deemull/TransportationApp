@@ -1,12 +1,15 @@
 package com.company;
 
+import java.util.ArrayList;
+
 public class HovLane {
     private Car head;
     private HovLane next;
 
-    public HovLane() {
+    public HovLane(int numCars) {
         head = new Car();
-        next = null;
+        if (numCars != 0)
+        next = new HovLane(numCars - 1);
     }
 
     public Car getHead() {
@@ -27,10 +30,10 @@ public class HovLane {
 
     @Override
     public String toString() {
-        return "HovLane{" +
-                "head=" + head +
-                ", next=" + next +
-                '}';
+        if (next == null) {
+            return " " + head;
+        }
+        return head + "-->" + next;
     }
 
     public int size() {
@@ -42,4 +45,19 @@ public class HovLane {
         }
         return count;
     }
+    public ArrayList<Integer> numOccupants(int occupied) {
+        ArrayList<Integer> occupants = new ArrayList<Integer>();
+        if (head.getId() == occupied) {
+            occupants.add(head.getId());
+        }
+        return occupants;
+    }
+    public int countCarColor(String color) {
+        int count = 0;
+        if (head.getColor() == color) {
+            count++;
+        }
+        return count;
+    }
+
 }
