@@ -8,8 +8,9 @@ public class Main {
         HovLane lane1 = new HovLane();
         System.out.println(lane1);
         lane1.size();
+        System.out.println(lane1.size());
         Car toyota = new Car();
-        
+
 
     }
 }

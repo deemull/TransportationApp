@@ -34,11 +34,11 @@ public class HovLane {
     }
 
     public int size() {
-        HovLane temp = this.next;
+        HovLane lane = this.next;
         int count = 0;
-        while (temp != null){
+        if (lane != null){
             count++;
-            temp = temp.next;
+            lane = lane.next;
         }
         return count;
     }
