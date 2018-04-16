@@ -1,32 +1,32 @@
 package com.company;
 
-public class LList {
-    LList next;
+public class Node {
+    Node next;
     int value;
 
-    public LList() {
+    public Node() {
         next = null;
         value = 0;
     }
-    public LList(int value) {
+    public Node(int value) {
         this.value = value;
         next = null;
     }
-    public LList(int num, LList next) {
+    public Node(int num, Node next) {
         value = num;
         this.next = next;
     }
 
-    public LList(LList rhs) {
+    public Node(Node rhs) {
         value = rhs.value;
         this.next = rhs;
     }
 
-    public LList getNext() {
+    public Node getNext() {
         return next;
     }
 
-    public void setNext(LList next) {
+    public void setNext(Node next) {
         this.next = next;
     }
 
@@ -37,7 +37,8 @@ public class LList {
     public void setValue(int value) {
         this.value = value;
     }
-    public int count(LList head) {
+
+    public int count(Node head) {
         if (next == null) {
             return 0;
         }
@@ -46,7 +47,7 @@ public class LList {
 
     @Override
     public String toString() {
-        return "LList{" +
+        return "Node{" +
                 "next=" + next +
                 ", value=" + value +
                 '}';
