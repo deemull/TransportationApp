@@ -10,6 +10,11 @@ public class Car {
         id = 0;
         color = "";
     }
+    public Car(int numOfOccupants, int id, String color) {
+        this.numOfOccupants = numOfOccupants;
+        this.id = id;
+        this.color = color;
+    }
 
     public int getNumOfOccupants() {
         return numOfOccupants;
@@ -37,7 +42,7 @@ public class Car {
 
     @Override
     public String toString() {
-        return "Car{" + id + "" + color + "" + numOfOccupants + '\'' +
+        return "Car{" + numOfOccupants + " " + id + " " +  color+ '\'' +
                 '}';
     }
 }

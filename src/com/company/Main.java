@@ -7,14 +7,27 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World! ");
 
-        HovLane lane1 = new HovLane(3);
+        Car toyota = new Car(3, 13665, "grey");
+        Car nissan = new Car();
+        HovLane lane1 = new HovLane();
         System.out.println(lane1);
-        lane1.size();
-        System.out.println(lane1.size());
+
+        //creating linked list of cars
+        HovLane lane = lane1.prepend(toyota);
+        System.out.println(lane);
+
+        //outputting the size of the list
+        int listSize = lane1.size();
+        System.out.println(listSize);
+
+        //outputting cars with 1 occupant
         ArrayList<Integer> occupants = lane1.numOccupants(1);
         System.out.println(occupants);
+
+        //outputting number of cars that are red
         int colorCars = lane1.countCarColor("red");
         System.out.println(colorCars);
+
 
 
     }

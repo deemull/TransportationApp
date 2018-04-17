@@ -1,15 +1,17 @@
 package com.company;
-
 import java.util.ArrayList;
 
 public class HovLane {
     private Car head;
     private HovLane next;
 
-    public HovLane(int numCars) {
+    public HovLane() {
         head = new Car();
-        if (numCars != 0)
-        next = new HovLane(numCars - 1);
+        next = null;
+    }
+    public HovLane(Car head) {
+        this.head = head;
+        next = null;
     }
 
     public Car getHead() {
@@ -35,15 +37,17 @@ public class HovLane {
         }
         return head + "-->" + next;
     }
+    public HovLane prepend(Car car) {
+        HovLane temp = new HovLane(car);
+        temp.next = this;
+        return temp;
+    }
 
     public int size() {
-        HovLane lane = this.next;
-        int count = 0;
-        if (lane != null){
-            count++;
-            lane = lane.next;
+        if (this.next == null) {
+            return 1;
         }
-        return count;
+        return 1 + size();
     }
     public ArrayList<Integer> numOccupants(int occupied) {
         ArrayList<Integer> occupants = new ArrayList<Integer>();
