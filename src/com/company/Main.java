@@ -27,8 +27,14 @@ public class Main {
         System.out.println(occupants);
 
         //outputting number of cars that are red
-        int colorCars = lane1.countCarColor(cars,"red");
+        ArrayList<Car> carColors = new ArrayList<Car>();
+        int colorCars = lane1.countCarColor(carColors,"red");
         System.out.println(colorCars);
+
+        //What was the most number of cars in HOV[H]?
+
+
+        //Was it ever true that HOV1 and HOV2 had [N] cars?
 
 
 

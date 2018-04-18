@@ -66,5 +66,16 @@ public class HovLane {
         }
         return count;
     }
+    public int numCarsInHov() {
+        int count = 0;
+
+        return count;
+    }
+    public boolean hasNCars(HovLane lane1, HovLane lane2, int numCars) {
+        if (lane1.getHead() == null) {
+            
+        }
+        return true;
+    }
 
 }
