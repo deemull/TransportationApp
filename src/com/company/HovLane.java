@@ -57,10 +57,10 @@ public class HovLane {
         }
         return occupants;
     }
-    public int countCarColor(ArrayList<Integer> cars, String color) {
+    public int countCarColor(ArrayList<Car> cars, String color) {
         int count = 0;
         for (int i = 0; i < cars.size(); i++) {
-            if (head.getColor() == color) {
+            if (cars.get(i).getColor() == color) {
                 count++;
             }
         }

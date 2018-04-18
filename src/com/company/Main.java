@@ -22,11 +22,11 @@ public class Main {
 
         //outputting cars with 1 occupant
         ArrayList<Integer> cars = new ArrayList<Integer>();
+
         ArrayList<Integer> occupants = lane1.numOccupants(cars,1);
         System.out.println(occupants);
 
         //outputting number of cars that are red
-
         int colorCars = lane1.countCarColor(cars,"red");
         System.out.println(colorCars);
 
