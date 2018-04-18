@@ -74,7 +74,7 @@ public class HovLane {
 
     public boolean hasNCars(HovLane lane1, HovLane lane2, int numCars) {
         if (lane1.getHead() == null) {
-
+            return false;
         }
         return true;
     }
