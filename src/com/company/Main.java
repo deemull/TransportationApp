@@ -21,11 +21,13 @@ public class Main {
         System.out.println(listSize);
 
         //outputting cars with 1 occupant
-        ArrayList<Integer> occupants = lane1.numOccupants(1);
+        ArrayList<Integer> cars = new ArrayList<Integer>();
+        ArrayList<Integer> occupants = lane1.numOccupants(cars,1);
         System.out.println(occupants);
 
         //outputting number of cars that are red
-        int colorCars = lane1.countCarColor("red");
+
+        int colorCars = lane1.countCarColor(cars,"red");
         System.out.println(colorCars);
 
 

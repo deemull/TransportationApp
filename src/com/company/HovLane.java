@@ -47,19 +47,22 @@ public class HovLane {
         if (this.next == null) {
             return 1;
         }
-        return 1 + size();
+        return 1 + this.next.next.size();
     }
-    public ArrayList<Integer> numOccupants(int occupied) {
-        ArrayList<Integer> occupants = new ArrayList<Integer>();
-        if (head.getId() == occupied) {
-            occupants.add(head.getId());
+    public ArrayList<Integer> numOccupants(ArrayList<Integer> occupants, int occupied) {
+        for (int i = 0; i < occupants.size(); i++) {
+            if (head.getNumOfOccupants() == occupied) {
+                occupants.add(head.getId());
+            }
         }
         return occupants;
     }
-    public int countCarColor(String color) {
+    public int countCarColor(ArrayList<Integer> cars, String color) {
         int count = 0;
-        if (head.getColor() == color) {
-            count++;
+        for (int i = 0; i < cars.size(); i++) {
+            if (head.getColor() == color) {
+                count++;
+            }
         }
         return count;
     }
