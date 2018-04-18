@@ -1,4 +1,5 @@
 package com.company;
+
 import java.util.ArrayList;
 
 public class HovLane {
@@ -9,6 +10,7 @@ public class HovLane {
         head = new Car();
         next = null;
     }
+
     public HovLane(Car head) {
         this.head = head;
         next = null;
@@ -37,6 +39,7 @@ public class HovLane {
         }
         return head + "-->" + next;
     }
+
     public HovLane prepend(Car car) {
         HovLane temp = new HovLane(car);
         temp.next = this;
@@ -49,31 +52,29 @@ public class HovLane {
         }
         return 1 + this.next.next.size();
     }
-    public ArrayList<Integer> numOccupants(ArrayList<Integer> occupants, int occupied) {
-        for (int i = 0; i < occupants.size(); i++) {
-            if (head.getNumOfOccupants() == occupied) {
-                occupants.add(head.getId());
-            }
+
+    public void numOccupants(HovLane lane, int occupied) {
+        if (lane.getHead().getNumOfOccupants() == occupied) {
+            System.out.println(lane.getHead().getId());
         }
-        return occupants;
     }
-    public int countCarColor(ArrayList<Car> cars, String color) {
+
+    public int countCarColor(HovLane lane, String color) {
         int count = 0;
-        for (int i = 0; i < cars.size(); i++) {
-            if (cars.get(i).getColor() == color) {
-                count++;
-            }
+        if (lane.getHead().getColor() == color) {
+            count++;
         }
         return count;
     }
+
     public int numCarsInHov() {
         int count = 0;
-
         return count;
     }
+
     public boolean hasNCars(HovLane lane1, HovLane lane2, int numCars) {
         if (lane1.getHead() == null) {
-            
+
         }
         return true;
     }

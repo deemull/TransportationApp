@@ -21,14 +21,12 @@ public class Main {
         System.out.println(listSize);
 
         //outputting cars with 1 occupant
-        ArrayList<Integer> cars = new ArrayList<Integer>();
 
-        ArrayList<Integer> occupants = lane1.numOccupants(cars,1);
-        System.out.println(occupants);
+        lane1.numOccupants(lane,1);
+        System.out.println(lane1);
 
         //outputting number of cars that are red
-        ArrayList<Car> carColors = new ArrayList<Car>();
-        int colorCars = lane1.countCarColor(carColors,"red");
+        int colorCars = lane1.countCarColor(lane, "red");
         System.out.println(colorCars);
 
         //What was the most number of cars in HOV[H]?
