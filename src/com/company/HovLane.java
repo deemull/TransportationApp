@@ -85,24 +85,20 @@ public class HovLane {
 
     }
 
-    public void split(HovLane lane1, HovLane lane2, int splitNum) {
+    public HovLane split(HovLane lane1, HovLane lane2, int splitNum) {
         HovLane temp = lane1.next.next;
         HovLane temp2 = temp.next;
         temp.next = null;
-        lane2 = temp2;
-        System.out.println(temp2);
-        //return lane2;
-    }
-    public int numCarsInHov() {
-        int count = 0;
-        return count;
+        return temp2;
     }
 
-    public boolean hasNCars(HovLane lane1, HovLane lane2, int numCars) {
-        if (lane1.getHead() == null) {
-            return false;
+
+    public void isGreater(HovLane lane1, HovLane lane2, int numCars) {
+        if (lane1.size() > numCars && lane2.size() > numCars) {
+            System.out.println("true ");
         }
-        return true;
+        System.out.println();
     }
+
 
 }
