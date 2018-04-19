@@ -8,8 +8,10 @@ public class Main {
         System.out.println("Hello World! ");
 
         Car toyota = new Car(3, 13665, "red");
-        Car nissan = new Car();
-        HovLane lane1 = new HovLane();
+        Car nissan = new Car(1, 332, "grey");
+        Car ford = new Car(1, 2200, "red");
+        //create an HovLane of cars.
+        HovLane lane1 = new HovLane(10);
         System.out.println(lane1);
 
         //creating linked list of cars
@@ -18,19 +20,28 @@ public class Main {
 
         //outputting the size of the list
         int listSize = lane1.size();
-        System.out.println(listSize);
+        System.out.println("size: " + listSize);
 
         //outputting cars with 1 occupant
-        //System.out.println("\nbefore numOccupants():\nlane1 is " + lane1 + "\nlane is " + lane + "\n.");
-        //lane1.numOccupants(lane, 1);
+        System.out.println("\nbefore numOccupants():\nlane1 is " + lane1 + "\n.");
+        ArrayList<Integer> occupants = lane1.numOccupants(lane, 1);
+        System.out.println("Id: " + occupants + " for car with 1 occupant " );
 
 
-        // TODO Oh, no.  countCarColor() returns the wrong value for [parameters]
-        System.out.println("\nbefore countCarColor():\nlane is " + lane + "\ncolor is red.");
+        System.out.println("\nbefore countCarColor():\nlane is " + lane1 + "\ncolor is red.");
         int colorCars = lane1.countCarColor(lane, "red");
-        System.out.println("There are " + colorCars + "\nlane is " + lane + "\ncolor is red.");
+        System.out.println("There are " + colorCars + "\nlane is " + lane1 + "\ncolor is red.");
 
 
+        // split HovLane into 2
+        //lane1.split(lane1, lane, 3);
+        System.out.println("lane1: " + lane1);
+        System.out.println("lane2: " + lane);
+
+        lane1.split(lane1, lane, 3 );
+
+        System.out.println("lane1: " + lane1);
+        System.out.println("lane2: " + lane);
         //What was the most number of cars in HOV[H]?
 
 

@@ -13,7 +13,14 @@ public class HovLane {
 
     public HovLane(Car head) {
         this.head = head;
+        next = this.getNext();
+    }
+    public HovLane(int size) {
+        head = new Car();
         next = null;
+        if (size > 1) {
+            next = new HovLane(size - 1);
+        }
     }
 
     public Car getHead() {
@@ -50,17 +57,19 @@ public class HovLane {
         if (this.next == null) {
             return 1;
         }
-        return 1 + this.next.next.size();
+        return 1 + this.next.size();
     }
 
-    public int numOccupants(HovLane lane, int occupied) {
-        int count = 0;
-        for (int i = 0; i < lane.size(); i++) {
+    public ArrayList<Integer> numOccupants(HovLane lane, int occupied) {
+        ArrayList<Integer> occupants = new ArrayList<Integer>();
+        while (lane != null) {
             if (lane.getHead().getNumOfOccupants() == occupied) {
-                count++;
+                occupants.add(lane.getHead().getId());
             }
+            lane = lane.next;
         }
-        return count;
+
+        return occupants;
     }
 
     public int countCarColor(HovLane lane, String color) {
@@ -76,6 +85,14 @@ public class HovLane {
 
     }
 
+    public void split(HovLane lane1, HovLane lane2, int splitNum) {
+        HovLane temp = lane1.next.next;
+        HovLane temp2 = temp.next;
+        temp.next = null;
+        lane2 = temp2;
+        System.out.println(temp2);
+        //return lane2;
+    }
     public int numCarsInHov() {
         int count = 0;
         return count;
