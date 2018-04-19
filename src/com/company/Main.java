@@ -25,10 +25,10 @@ public class Main {
         //lane1.numOccupants(lane, 1);
 
 
-        //outputting number of cars that are red
-        System.out.println("\nbefore countCarColor():\nlane1 is " + lane1 + "\nlane is " + lane + "\ncolor is red.");
+        // TODO Oh, no.  countCarColor() returns the wrong value for [parameters]
+        System.out.println("\nbefore countCarColor():\nlane is " + lane + "\ncolor is red.");
         int colorCars = lane1.countCarColor(lane, "red");
-        System.out.println("There are " + colorCars + " red cars.\nlane1 is " + lane1 + "\nlane is " + lane + "\ncolor is red.");
+        System.out.println("There are " + colorCars + "\nlane is " + lane + "\ncolor is red.");
 
 
         //What was the most number of cars in HOV[H]?

@@ -68,9 +68,11 @@ public class HovLane {
         while (lane != null) {
             if (lane.getHead().getColor() == color) {
                 count++;
+                lane = lane.next;
             }
         }
-        return count;
+            return count;
+
     }
 
     public int numCarsInHov() {
