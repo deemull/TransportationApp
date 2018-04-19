@@ -53,16 +53,22 @@ public class HovLane {
         return 1 + this.next.next.size();
     }
 
-    public void numOccupants(HovLane lane, int occupied) {
-        if (lane.getHead().getNumOfOccupants() == occupied) {
-            System.out.println(lane.getHead().getId());
+    public int numOccupants(HovLane lane, int occupied) {
+        int count = 0;
+        for (int i = 0; i < lane.size(); i++) {
+            if (lane.getHead().getNumOfOccupants() == occupied) {
+                count++;
+            }
         }
+        return count;
     }
 
     public int countCarColor(HovLane lane, String color) {
         int count = 0;
-        if (lane.getHead().getColor() == color) {
-            count++;
+        while (lane != null) {
+            if (lane.getHead().getColor() == color) {
+                count++;
+            }
         }
         return count;
     }
