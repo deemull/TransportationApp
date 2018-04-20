@@ -77,7 +77,6 @@ public class HovLane {
         while (lane != null) {
             if (lane.getHead().getColor() == color) {
                 count++;
-
             }
             lane = lane.next;
         }
@@ -86,7 +85,10 @@ public class HovLane {
     }
 
     public HovLane split(HovLane lane1, HovLane lane2, int splitNum) {
-        HovLane temp = lane1.next.next;
+        HovLane temp = lane1;
+        for (int i = 1; i < splitNum; i++) {
+            temp = temp.next;
+        }
         HovLane temp2 = temp.next;
         temp.next = null;
         return temp2;
