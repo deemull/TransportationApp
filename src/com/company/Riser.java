@@ -18,22 +18,17 @@ public class Riser {
 
     }
 
-    private void push(Car car){
+    public void push(Car car){
         cars++;
         carStack.push(car);
     }
 
-    private Car pop(){
+    public Car pop(){
         cars--;
         return carStack.pop();
     }
-
-    public Random getRandCar() {
-        return randCar;
-    }
-
-    public void setRandCar(Random randCar) {
-        this.randCar = randCar;
+    public int size() {
+        return cars;
     }
 
     public int getCars() {

@@ -44,14 +44,21 @@ public class Main {
         //Was it ever true that HOV1 and HOV2 had [N] cars?
         lane1.isGreater(lane1, lane2, 2);
 
-        //How many cars are in Riser[R]?
+        //outputting a riser
         Riser lot1 = new Riser();
         System.out.println(lot1);
 
-        ArrayList<Riser> lots = new ArrayList<Riser>();
+        //How many cars are in Riser[R]?
+        int numCars = lot1.size();
+        System.out.println(numCars);
+
+        //Creating list of risers
+        Risers lots = new Risers();
         System.out.println(lots);
 
-        int lotSize = lots.size();
-        System.out.println(lotSize);
+        //The valet drives the car to the riser with the fewest cars, parks in the car elevator, and that car
+        // (and every car above it) is automatically lifted one floor.
+        lots.addCarToRiser(toyota);
+        System.out.println(lots);
     }
 }
