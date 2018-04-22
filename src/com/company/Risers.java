@@ -9,6 +9,7 @@ public class Risers {
         lots = new ArrayList<Riser>();
     }
 
+
     public void addCarToRiser(Car car) {
         for (int i = 0; i < lots.size(); i++) {
             if (lots.get(i).getCars() < lots.get(i+1).getCars()) {

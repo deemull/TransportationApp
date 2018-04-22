@@ -27,9 +27,6 @@ public class Riser {
         cars--;
         return carStack.pop();
     }
-    public int size() {
-        return cars;
-    }
 
     public int getCars() {
         return cars;

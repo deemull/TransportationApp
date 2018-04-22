@@ -49,7 +49,7 @@ public class Main {
         System.out.println(lot1);
 
         //How many cars are in Riser[R]?
-        int numCars = lot1.size();
+        int numCars = lot1.getCars();
         System.out.println(numCars);
 
         //Creating list of risers
