@@ -48,17 +48,27 @@ public class Main {
         Riser lot1 = new Riser();
         System.out.println(lot1);
 
+        //pushing a car to the riser
+        lot1.push(new Car());
+        System.out.println(lot1);
+
         //How many cars are in Riser[R]?
         int numCars = lot1.getCars();
         System.out.println(numCars);
 
         //Creating list of risers
-        Risers lots = new Risers();
+        Risers lots = new Risers(3);
         System.out.println(lots);
+
+        //size of risers
+        int size = lots.size();
+        System.out.println(size);
+
 
         //The valet drives the car to the riser with the fewest cars, parks in the car elevator, and that car
         // (and every car above it) is automatically lifted one floor.
-        lots.addCarToRiser(toyota);
+        lots.addCarToRiser();
         System.out.println(lots);
+
     }
 }
