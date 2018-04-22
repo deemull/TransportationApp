@@ -43,5 +43,15 @@ public class Main {
 
         //Was it ever true that HOV1 and HOV2 had [N] cars?
         lane1.isGreater(lane1, lane2, 2);
+
+        //How many cars are in Riser[R]?
+        Riser lot1 = new Riser();
+        System.out.println(lot1);
+
+        ArrayList<Riser> lots = new ArrayList<Riser>();
+        System.out.println(lots);
+
+        int lotSize = lots.size();
+        System.out.println(lotSize);
     }
 }
