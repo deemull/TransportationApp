@@ -20,7 +20,7 @@ public class Risers {
         }
     }
     public void addCarToRiser() {
-        for (int i = 0; i <= lots.size(); i++) {
+        for (int i = 1; i < lots.size(); i++) {
             if (lots.get(i).size() <= lots.get(i+1).size()) {
                 lots.get(i).push(new Car());
             }
@@ -28,12 +28,13 @@ public class Risers {
         System.out.println(lots);
     }
 
-    public void hasID(int id) {
-        lots.get(id).hasID(id);
-    }
-
-    public int moveCars() {
+    public int moveCars(Car car) {
         int count = 0;
+        for (int i = 0; i < lots.size(); i++) {
+            while (lots.get(i) != lots.get(i+1)) {
+                count++;
+            }
+        }
         return count;
     }
     @Override
