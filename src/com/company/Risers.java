@@ -28,14 +28,9 @@ public class Risers {
         System.out.println(lots);
     }
 
-//    public int hasID(int id) {
-//        for (int i = 0; i < lots.size(); i++) {
-//            if (lots.get(i)() == id) {
-//
-//            }
-//        }
-//        return id;
-//    }
+    public void hasID(int id) {
+        lots.get(id).hasID(id);
+    }
 
     public int moveCars() {
         int count = 0;

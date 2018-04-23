@@ -80,6 +80,10 @@ public class Main {
         //lots.addCarToRiser();
         //System.out.println(lots);
 
+        //(8) Which of the three risers has car [D]. [D] is the id of the car.
+        lots.hasID(34);
+        System.out.println(lots);
+
 
     }
 }

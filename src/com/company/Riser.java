@@ -28,6 +28,14 @@ public class Riser {
         return 1 + carStack.size();
     }
 
+    public Car hasID(int id) {
+        for (int i = 0; i < carStack.size(); i++) {
+            if (carStack.get(i).getId() == id) {
+                return carStack.get(i);
+            }
+        }
+        return carStack.get(id);
+    }
     @Override
     public String toString() {
         return carStack + " has " + numOfCars + " cars.";
