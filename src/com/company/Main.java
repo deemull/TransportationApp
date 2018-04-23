@@ -45,18 +45,24 @@ public class Main {
         lane1.isGreater(lane1, lane2, 2);
 
         //outputting a riser
-        Riser lot1 = new Riser();
-        System.out.println(lot1);
+        Riser r = new Riser();
+        System.out.println("r (at construction) is " + r);
 
         //pushing a car to the riser
-        lot1.push(new Car());
-        System.out.println(lot1);
+        r.push(new Car());
+        System.out.println(r);
 
         //How many cars are in Riser[R]?
-        int numCars = lot1.getCars();
-        System.out.println(numCars);
+        //int numCars = lot1.getCars();
+        //System.out.println(numCars);
 
-        //Creating list of risers
+        r.push(new Car(3, 13665, "red"));
+        System.out.println("r (after push 13665) is " + r);
+
+        r.push(new Car(1, 222, "blue"));
+        System.out.println("r (after push 222) is " + r);
+
+        /*Creating list of risers
         Risers lots = new Risers(3);
         System.out.println(lots);
 
@@ -69,6 +75,7 @@ public class Main {
         // (and every car above it) is automatically lifted one floor.
         lots.addCarToRiser();
         System.out.println(lots);
+        */
 
     }
 }

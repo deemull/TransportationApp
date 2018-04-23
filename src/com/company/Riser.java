@@ -6,21 +6,17 @@ import java.util.Stack;
 public class Riser {
     private Random randCar = new Random();
     private Stack<Car> carStack;
-    private Car car;
-    private int cars;
+    private int numOfCars;
     private int id;
 
     public Riser () {
         carStack = new Stack<Car>();
-        cars = randCar.nextInt(5) + 1;
-        car = new Car(randCar.nextInt(5) + 1, randCar.nextInt(100) + 1, "grey");
-
     }
 
     public void push(Car car){
-        for (int i = 0; i < cars; i++) {
-            carStack.push(car);
-        }
+        numOfCars++;
+        carStack.push(car);
+
     }
 
     public Car pop(){
@@ -28,23 +24,10 @@ public class Riser {
     }
 
     public int size() {
-        return carStack.size();
-    }
-
-    public Car getCar() {
-        return car;
-    }
-
-    public void setCar(Car car) {
-        this.car = car;
-    }
-
-    public int getCars() {
-        return cars;
-    }
-
-    public void setCars(int cars) {
-        this.cars = cars;
+        if (carStack.size() == 0) {
+            return 0;
+        }
+        return 1 + carStack.size();
     }
 
     public int getId() {
@@ -58,6 +41,7 @@ public class Riser {
 
     @Override
     public String toString() {
-        return "Riser{" + ", carStack=" + carStack + ", cars=" + cars + '}';
+        return carStack + " has " + numOfCars + " cars.";
+
     }
 }
