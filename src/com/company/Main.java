@@ -62,20 +62,24 @@ public class Main {
         r.push(new Car(1, 222, "blue"));
         System.out.println("r (after push 222) is " + r);
 
-        /*Creating list of risers
+        //Creating list of risers
         Risers lots = new Risers(3);
         System.out.println(lots);
 
         //size of risers
         int size = lots.size();
-        System.out.println(size);
+        System.out.println("There are " + size + " risers");
+
+        //add to risers
+        lots.add();
+        System.out.println(lots);
 
 
         //The valet drives the car to the riser with the fewest cars, parks in the car elevator, and that car
         // (and every car above it) is automatically lifted one floor.
-        lots.addCarToRiser();
-        System.out.println(lots);
-        */
+        //lots.addCarToRiser();
+        //System.out.println(lots);
+
 
     }
 }

@@ -14,7 +14,13 @@ public class Risers {
     public int size() {
         return lots.size();
     }
-
+    public void add() {
+        for (int i = 0; i < lots.size(); i++) {
+            if (lots.get(i).size() == 0) {
+                lots.get(i).push(new Car());
+            }
+        }
+    }
     public void addCarToRiser() {
         for (int i = 0; i < lots.size(); i++) {
             if (lots.get(i).size() < lots.get(i+1).size()) {
@@ -24,14 +30,14 @@ public class Risers {
         System.out.println(lots);
     }
 
-    public int hasID(int id) {
-        for (int i = 0; i < lots.size(); i++) {
-            if (lots.get(i).getId() == id) {
-
-            }
-        }
-        return id;
-    }
+//    public int hasID(int id) {
+//        for (int i = 0; i < lots.size(); i++) {
+//            if (lots.get(i)() == id) {
+//
+//            }
+//        }
+//        return id;
+//    }
 
     public int moveCars() {
         int count = 0;

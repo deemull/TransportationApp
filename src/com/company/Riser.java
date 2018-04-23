@@ -1,13 +1,10 @@
 package com.company;
 
-import java.util.Random;
 import java.util.Stack;
 
 public class Riser {
-    private Random randCar = new Random();
     private Stack<Car> carStack;
     private int numOfCars;
-    private int id;
 
     public Riser () {
         carStack = new Stack<Car>();
@@ -20,6 +17,7 @@ public class Riser {
     }
 
     public Car pop(){
+        numOfCars--;
         return carStack.pop();
     }
 
@@ -29,15 +27,6 @@ public class Riser {
         }
         return 1 + carStack.size();
     }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
 
     @Override
     public String toString() {
