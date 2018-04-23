@@ -16,14 +16,12 @@ public class Risers {
     }
     public void add() {
         for (int i = 0; i < lots.size(); i++) {
-            if (lots.get(i).size() == 0) {
-                lots.get(i).push(new Car());
-            }
+            lots.get(i).push(new Car());
         }
     }
     public void addCarToRiser() {
-        for (int i = 0; i < lots.size(); i++) {
-            if (lots.get(i).size() < lots.get(i+1).size()) {
+        for (int i = 0; i <= lots.size(); i++) {
+            if (lots.get(i).size() <= lots.get(i+1).size()) {
                 lots.get(i).push(new Car());
             }
         }
